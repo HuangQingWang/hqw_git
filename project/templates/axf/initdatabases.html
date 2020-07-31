@@ -1,0 +1,26 @@
+{% load static from staticfiles%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <ul>
+        {%for stu in title%}
+            {% if forloop.counter|divisibleby:2 %}
+                <li style="background-color: aqua">
+                    <img src="{{stu.img}}" alt="">
+                </li>
+            {%else%}
+                <li >
+                  <img src="{{stu.img}}" alt="">
+                </li>
+            {%endif%}
+        {%empty%}
+            <li>目前没有学生</li>
+        {%endfor%}
+    </ul>
+</body>
+</html>

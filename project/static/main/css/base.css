@@ -1,0 +1,103 @@
+html, body{
+    width:100%;
+    height:100%;
+}
+
+body{
+    margin:0;
+    padding:0;
+    /*在x轴溢出就隐藏*/
+    overflow-x:hidden;
+    /*可以让其在y轴滚动*/
+    overflow-y:auto;
+    background:#eee;
+}
+
+header, footer{
+    width: 100%;
+    /*用rem是为了更好的在不同分辨率的手机屏幕上面适配*/
+    height: 1.5rem;
+    font-size:0.277777rem;
+    /*border-top指的是框顶*/
+    border-top:1px solid #f0f0f0;
+    /*让内容漂浮在其它的上面，值越大越靠上*/
+    z-index:10;
+    position:fixed;
+    /*flex是为了让header, footer成为一个容器*/
+    display: flex;
+}
+header{
+    background:yellow;
+    /*固定在上面*/
+    top:0;
+    left:0;
+}
+footer{
+    background:#fff;
+    /*固定在下面*/
+    bottom:0;
+    left:0;
+}
+
+footer a{
+    display:block;
+    width:25%!important;
+    text-align:center;
+    overflow:hidden!important;
+}
+
+footer dl dt{
+    height:0.777777rem;
+    padding-top:0.22222rem;
+    position:relative;
+}
+
+/*放图片的*/
+footer dl dt span{
+    display:inline-block;
+    width:0.513889rem;
+    height:0.513889rem;
+}
+/*放文字的*/
+footer dl dd{
+    width: 100%;
+    height: 0.708333rem;
+}
+
+
+footer .home span{
+    background: url(/static/main/img/home.png) no-repeat;
+    background-size:0.513889rem;
+}
+footer .market span{
+    background:url(/static/main/img/market.png) no-repeat;
+    background-size:0.513889rem;
+}
+footer .cart span{
+    background:url(/static/main/img/cart.png) no-repeat;
+    background-size:0.513889rem;
+}
+footer .mine span{
+    background:url(/static/main/img/mine.png) no-repeat;
+    background-size:0.513889rem;
+}
+
+
+/*吧a的点和下划线取消*/
+a{
+    text-decoration:none
+}
+a:link{
+    text-decoration:none
+}
+a:visited{
+    text-decoration:none
+}
+a:hover{
+    text-decoration:none
+}
+a:active{
+    text-decoration:none
+}
+/* end吧a的点和下划线取消*/
+

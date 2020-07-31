@@ -1,0 +1,300 @@
+{% extends 'axf/base.html'%}
+{%load static from staticfiles%}
+
+{% block linkscript%}
+<link rel="stylesheet" type="text/css" href="{% static 'home/css/home.css'%}" />
+<script type="text/javascript" charset="utf-8" src="{% static 'home/js/home.js' %}"></script>
+{% endblock linkscript%}
+
+
+
+
+{% block base%}
+<div id="home">
+    <!--轮播-->
+    <section class="swiper-container" id="topSwiper">
+        <div class="swiper-wrapper">
+            {% for item in  wheels%}
+            <div class="swiper-slide">
+                <a href="#"><img src="{{item.img}}" alt=""></a>
+
+            </div>
+            {%endfor%}
+        </div>
+        <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"></div>
+    </section>
+
+    <section class="topMenu">
+        <nav>
+            <ul>
+                {% for item in  navs%}
+                <li>
+                    <a href="#">
+                        <img src="{{item.img}}" alt=""></a>
+                        <span>{{item.name}}</span>
+                </li>
+                {%endfor%}
+            </ul>
+        </nav>
+        <menu class="swiper-container swiperMenu" id="swiperMenu">
+            <ul class="swiper-wrapper">
+                {% for item in mustbuyList %}
+                <li class="swiper-slide">
+                    <a href="#"><img src="{{item.img}}"/></a>
+                </li>
+                {% endfor %}
+            </ul>
+        </menu>
+    </section >
+
+
+    <div class="commfloor">
+        <div class="c-title">
+            <p class="icon"></p>
+            <p class="title">米面制品</p>
+        </div>
+        <div class="coll">
+            <a href="#">
+
+                <img src="\static\main\img\mimianshop\0.jpg" alt="米面粮油">
+            </a>
+
+            <div class="c-cards">
+                <ul class="clearfix">
+                    <li>
+                        <a href="#">食用油</a>
+                    </li>
+                    <li>
+                        <a href="#">品质大油</a>
+                    </li>
+                    <li>
+                        <a href="#">方便速食</a>
+                    </li>
+                    <li>
+                        <a href="#">面粉米粉</a>
+                    </li>
+                    <li>
+                        <a href="#">厨房调味</a>
+                    </li>
+                    <li>
+                        <a href="#">南北干货</a>
+                    </li>
+                </ul>
+            </div>
+
+
+        </div>
+        <div class="col2">
+            <ul class="clearfix">
+                {%for item in mianmiList%}
+                <li >
+                    <a href="#"><img src="{{item.img}}" alt=""><p class="name">{{item.name}}</p></a>
+                </li>
+                {%endfor%}
+
+            </ul>
+        </div>
+    </div>
+
+    <div class="commfloor">
+        <div class="c-title">
+            <p class="icon"></p>
+            <p class="title">李岚好酒</p>
+        </div>
+        <div class="coll">
+            <a href="#">
+
+                <img src="\static\main\img\mimianshop\1.jpg" alt="米面粮油">
+            </a>
+
+            <div class="c-cards">
+                <ul class="clearfix">
+                    <li>
+                        <a href="#">食用油</a>
+                    </li>
+                    <li>
+                        <a href="#">品质大油</a>
+                    </li>
+                    <li>
+                        <a href="#">方便速食</a>
+                    </li>
+                    <li>
+                        <a href="#">面粉米粉</a>
+                    </li>
+                    <li>
+                        <a href="#">厨房调味</a>
+                    </li>
+                    <li>
+                        <a href="#">南北干货</a>
+                    </li>
+                </ul>
+            </div>
+
+
+        </div>
+        <div class="col2">
+            <ul class="clearfix">
+                {%for item in mianmiList%}
+                <li >
+                    <a href="#"><img src="{{item.img}}" alt=""><p class="name">{{item.name}}</p></a>
+                </li>
+                {%endfor%}
+
+            </ul>
+        </div>
+    </div>
+
+    <div class="commfloor">
+        <div class="c-title">
+            <p class="icon"></p>
+            <p class="title">乳品充饮</p>
+        </div>
+        <div class="coll">
+            <a href="#">
+
+                <img src="\static\main\img\mimianshop\2.jpg" alt="米面粮油">
+            </a>
+
+            <div class="c-cards">
+                <ul class="clearfix">
+                    <li>
+                        <a href="#">食用油</a>
+                    </li>
+                    <li>
+                        <a href="#">品质大油</a>
+                    </li>
+                    <li>
+                        <a href="#">方便速食</a>
+                    </li>
+                    <li>
+                        <a href="#">面粉米粉</a>
+                    </li>
+                    <li>
+                        <a href="#">厨房调味</a>
+                    </li>
+                    <li>
+                        <a href="#">南北干货</a>
+                    </li>
+                </ul>
+            </div>
+
+
+        </div>
+        <div class="col2">
+            <ul class="clearfix">
+                {%for item in mianmiList%}
+                <li >
+                    <a href="#"><img src="{{item.img}}" alt=""><p class="name">{{item.name}}</p></a>
+                </li>
+                {%endfor%}
+
+            </ul>
+        </div>
+    </div>
+
+    <div class="commfloor">
+        <div class="c-title">
+            <p class="icon"></p>
+            <p class="title">制品清洁</p>
+        </div>
+        <div class="coll">
+            <a href="#">
+
+                <img src="\static\main\img\mimianshop\3.jpg" alt="米面粮油">
+            </a>
+
+            <div class="c-cards">
+                <ul class="clearfix">
+                    <li>
+                        <a href="#">食用油</a>
+                    </li>
+                    <li>
+                        <a href="#">品质大油</a>
+                    </li>
+                    <li>
+                        <a href="#">方便速食</a>
+                    </li>
+                    <li>
+                        <a href="#">面粉米粉</a>
+                    </li>
+                    <li>
+                        <a href="#">厨房调味</a>
+                    </li>
+                    <li>
+                        <a href="#">南北干货</a>
+                    </li>
+                </ul>
+            </div>
+
+
+        </div>
+        <div class="col2">
+            <ul class="clearfix">
+                {%for item in mianmiList%}
+                <li >
+                    <a href="#"><img src="{{item.img}}" alt=""><p class="name">{{item.name}}</p></a>
+                </li>
+                {%endfor%}
+
+            </ul>
+        </div>
+    </div>
+
+    <div class="commfloor">
+        <div class="c-title">
+            <p class="icon"></p>
+            <p class="title">休闲零食</p>
+        </div>
+        <div class="coll">
+            <a href="#">
+
+                <img src="\static\main\img\mimianshop\4.jpg" alt="米面粮油">
+            </a>
+
+            <div class="c-cards">
+                <ul class="clearfix">
+                    <li>
+                        <a href="#">食用油</a>
+                    </li>
+                    <li>
+                        <a href="#">品质大油</a>
+                    </li>
+                    <li>
+                        <a href="#">方便速食</a>
+                    </li>
+                    <li>
+                        <a href="#">面粉米粉</a>
+                    </li>
+                    <li>
+                        <a href="#">厨房调味</a>
+                    </li>
+                    <li>
+                        <a href="#">南北干货</a>
+                    </li>
+                </ul>
+            </div>
+
+
+        </div>
+        <div class="col2">
+            <ul class="clearfix">
+                {%for item in mianmiList%}
+                <li >
+                    <a href="#"><img src="{{item.img}}" alt=""><p class="name">{{item.name}}</p></a>
+                </li>
+                {%endfor%}
+
+            </ul>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+</div>
+<h1>home</h1>
+{% endblock base%}
